@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Cairo", "Segoe UI", system-ui, sans-serif;
+
+  --color-bg: #0e0e10;
+  --color-surface: #17171a;
+  --color-elevated: #1f1f23;
+  --color-fg: #f4f2ee;
+  --color-muted: #9a958c;
+  --color-subtle: #6f6b64;
+  --color-border: #2a2a2e;
+  --color-primary: #ff6a00;
+  --color-primary-fg: #140800;
+  --color-danger: #d4534a;
+  --color-danger-fg: #fff6f5;
+  --color-ok: #3fa36a;
+  --color-ok-fg: #06140c;
+  --color-ink: #0c0c0e;
+  --color-ink-fg: #f4f2ee;
+  --color-ink-muted: #9a958c;
+  --color-call: #2f9e63;
+  --color-call-fg: #06140c;
+  --color-me: #2a1a10;
+  --color-me-fg: #f4f2ee;
+  --color-them: #1f1f23;
+  --color-them-fg: #f4f2ee;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 28px;
+
+  --motion-quick: 150ms;
+  --motion-fast: 250ms;
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--color-bg);
+    color: var(--color-fg);
+    touch-action: manipulation;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  a,
+  button,
+  [role="button"],
+  input,
+  select,
+  textarea,
+  label {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  .nimb-verified path:first-of-type {
+    fill: #1877f2;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

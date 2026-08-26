@@ -1,0 +1,21 @@
+node_modules/
+.vercel/
+.tanstack/
+dist/
+.output/
+.nitro/
+.env
+.env.*
+!.env.example
+screenshots/
+artifacts/
+attachments/
+*.log
+.DS_Store
+.pglite/
+pglite-data/
+
+# Grok Build internals
+.grok/
+AGENTS.md
+scripts/qa-*.mjs
